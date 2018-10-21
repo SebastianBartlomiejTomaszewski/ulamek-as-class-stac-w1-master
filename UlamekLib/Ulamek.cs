@@ -19,20 +19,22 @@ namespace UlamekLib
             if (mianownik == 0)  throw new DivideByZeroException("mianownik nie może być 0");
             if (licznik == 0) mianownik = 1;
 
-            this.licznik = licznik;
-            this.mianownik = mianownik;
+
 
 
             if (mianownik<0)
             {
-                this.licznik = licznik * (-1);
-                this.mianownik=mianownik * (-1);
+                licznik = licznik * (-1);
+                mianownik=mianownik * (-1);
             }
 
             var d = nwd(licznik, mianownik);
 
-            this.licznik = licznik / d;
-            this.mianownik = mianownik / d;
+            licznik = licznik / d;
+            mianownik = mianownik / d;
+
+            this.licznik = licznik;
+            this.mianownik = mianownik;
         }
 
         public Ulamek() : this(0 ,1) { }
@@ -67,7 +69,7 @@ namespace UlamekLib
                 a = b;
                 b = tmp;
             }
-            return a;
+            return Math.Abs(a);
         }
 
 
