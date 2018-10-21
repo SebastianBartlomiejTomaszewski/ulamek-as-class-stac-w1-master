@@ -12,23 +12,27 @@ namespace UlamekLib
         private readonly long mianownik = 1;
 
         public long Licznik => licznik;
-        /*
-        {
-            get
-            {
-                return licznik;
-            }
-        }
-        */
         public long Mianownik => mianownik;
 
         public Ulamek(long licznik, long mianownik )
         {
-            this.licznik = licznik;
-            if (mianownik == 0)
-                throw new DivideByZeroException("mianownik nie może być 0");
+            if (mianownik == 0)  throw new DivideByZeroException("mianownik nie może być 0");
+            if (licznik == 0) mianownik = 1;
 
+            this.licznik = licznik;
             this.mianownik = mianownik;
+
+
+            if (mianownik<0)
+            {
+                this.licznik = licznik * (-1);
+                this.mianownik=mianownik * (-1);
+            }
+
+            var d = nwd(licznik, mianownik);
+
+            this.licznik = licznik / d;
+            this.mianownik = mianownik / d;
         }
 
         public Ulamek() : this(0 ,1) { }
@@ -41,7 +45,7 @@ namespace UlamekLib
             throw new NotImplementedException();
         }
 
-        public Ulamek( double )
+        public Ulamek( double x)
         {
             //to do
             throw new NotImplementedException();
@@ -51,6 +55,22 @@ namespace UlamekLib
         {
             return $"{licznik}/{mianownik}";
         }
+
+
+        
+        private long nwd(long a, long b)
+        {
+            long tmp;
+            while (b != 0)
+            {
+                tmp = a % b;
+                a = b;
+                b = tmp;
+            }
+            return a;
+        }
+
+
 
     }
 }

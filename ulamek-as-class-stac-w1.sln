@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlamekTest", "UlamekTest\Ul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UlamekLib", "UlamekLib\UlamekLib.csproj", "{04CE122B-B34E-4DEA-BD71-159C02C6F26E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectUlamek", "UnitTestProjectUlamek\UnitTestProjectUlamek.csproj", "{8F121BF8-EEA5-4F60-96FA-6C04784FAB03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{04CE122B-B34E-4DEA-BD71-159C02C6F26E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04CE122B-B34E-4DEA-BD71-159C02C6F26E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04CE122B-B34E-4DEA-BD71-159C02C6F26E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F121BF8-EEA5-4F60-96FA-6C04784FAB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F121BF8-EEA5-4F60-96FA-6C04784FAB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F121BF8-EEA5-4F60-96FA-6C04784FAB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F121BF8-EEA5-4F60-96FA-6C04784FAB03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
